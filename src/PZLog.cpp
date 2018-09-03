@@ -5,12 +5,12 @@
 
 using namespace std;
 
-void PZInitLog(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level) 
+int PZInitLog(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level) 
 {
-    PZLogMgr::getInstance().InitLogMgr(mode, filename, level);
+    return PZLogMgr::getInstance().InitLogMgr(mode, filename, level);
 }
 
-void PZLog(PZCStr mode, PZCStr msg)
+void PZLog(PZCStr mode, PZ_LogPriority level, PZCStr msg)
 {
-    PZLogMgr::getInstance().GetLogger().Log("test", PZ_LogPriority::LOG_DEBUG, "12344566");
+    PZLogMgr::getInstance().GetLogger().Log("test", level, "12344566");
 }

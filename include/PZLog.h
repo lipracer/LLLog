@@ -4,15 +4,15 @@
 #include "Common.h"
 
 #ifdef   __cplusplus
-
 extern "C" {
+#endif
 
-    void PZInitLog(PZ_LogMode, PZCStr FileName, PZ_LogPriority level);
+    int PZInitLog(PZ_LogMode, PZCStr FileName, PZ_LogPriority level);
+    void PZLog(PZCStr mode, PZ_LogPriority level, PZCStr msg);
 
-    void PZLog(PZCStr mode, PZCStr msg);
 
+#ifdef   __cplusplus
 }
-
 #endif
 
 

@@ -1,8 +1,6 @@
-﻿  PZLogger.cpp
+﻿  main.cpp
   Generating Code...
   Compiling...
-  main.cpp
-  PZLogMgr.cpp
   PZLog.cpp
   Generating Code...
   LLLog.vcxproj -> C:\Users\chenlonglong\Desktop\LLLog\platform\win\LLLog\Debug\LLLog.exe

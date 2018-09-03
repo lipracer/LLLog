@@ -8,11 +8,12 @@ PZLogMgr::~PZLogMgr()
 
 int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level)
 {
+
     if (!m_isInit)
     {
         lock_guard<mutex> _(m_init_mutex);
         if (!m_isInit)
-        {
+        {            
             m_log_mode = mode;
             m_filename = filename;
             m_log_level = level;
