@@ -1,16 +1,16 @@
 #include <string>
 #include <iostream>
-#include "../include/PZLog.h"
-#include "../include/PZLogMgr.h"
+#include "../include/PZLog.hpp"
+#include "../include/PZLogMgr.hpp"
 
 using namespace std;
 
-int PZInitLog(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level) 
+int PZInitLog(int mode, const char *filepath, int level)
 {
-    return PZLogMgr::getInstance().InitLogMgr(mode, filename, level);
+    return PZLogMgr::getInstance().InitLogMgr((PZ_LogMode)mode, filepath, (PZ_LogPriority)level);
 }
 
-void PZLog(PZCStr mode, PZ_LogPriority level, PZCStr msg)
+void PZLog(const char * module, int level, const char *msg)
 {
-    PZLogMgr::getInstance().GetLogger().Log("test", level, "12344566");
+    PZLogMgr::getInstance().GetLogger().Log("test", (PZ_LogPriority)level, "12344566");
 }

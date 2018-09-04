@@ -29,16 +29,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\common.h">
+    <ClInclude Include="..\..\..\..\include\common.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\PZLog.h">
+    <ClInclude Include="..\..\..\..\include\PZLog.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\PZLogMgr.h">
+    <ClInclude Include="..\..\..\..\include\PZLogger.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\PZLogger.h">
+    <ClInclude Include="..\..\..\..\include\PZLogMgr.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

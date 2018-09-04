@@ -1,3 +1,5 @@
 ﻿  PZLogger.cpp
+c:\users\chenlonglong\desktop\lllog\src\pzlogger.cpp(78): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(495): note: see declaration of 'gmtime'
   LLLog.vcxproj -> C:\Users\chenlonglong\Desktop\LLLog\platform\win\LLLog\Debug\LLLog.exe
   LLLog.vcxproj -> C:\Users\chenlonglong\Desktop\LLLog\platform\win\LLLog\Debug\LLLog.pdb (Full PDB)

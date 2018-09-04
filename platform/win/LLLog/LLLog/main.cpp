@@ -1,14 +1,14 @@
 #include <iostream>
 #include <thread>
 #include <sstream>
-#include "../../../../include/PZLog.h"
-#include "../../../../include/PZLogMgr.h"
+#include "../../../../include/PZLog.hpp"
+#include "../../../../include/PZLog.hpp"
 
 using namespace std;
 
 int main() 
 {
-    PZInitLog((PZ_LogMode)1, "", (PZ_LogPriority)1);
+    PZInitLog(1, ".", 1);
     for (size_t i = 0; i < 1; i++)
     {
         stringstream ss;

@@ -1,4 +1,5 @@
-#include "../include/PZLogMgr.h"
+#include "../include/PZLogMgr.hpp"
+
 
 PZLogMgr::PZLogMgr() : m_isInit(false),m_log_mode(PZ_LogMode::Log_Default){}
 PZLogMgr::~PZLogMgr() 
@@ -6,7 +7,7 @@ PZLogMgr::~PZLogMgr()
     delete m_logger;
 }
 
-int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level)
+int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filepath, PZ_LogPriority level)
 {
 
     if (!m_isInit)
@@ -15,10 +16,10 @@ int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filename, PZ_LogPriority level)
         if (!m_isInit)
         {            
             m_log_mode = mode;
-            m_filename = filename;
+            //m_filename = filepath;
             m_log_level = level;
             m_isInit = true;
-            m_logger = new PZLogger(level);
+            m_logger = new PZLoggerFile(level, filepath);
         }
     }
     return 0;

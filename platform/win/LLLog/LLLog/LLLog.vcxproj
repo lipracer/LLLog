@@ -101,7 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\chenlonglong\Desktop\LLLog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,10 +149,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\common.h" />
-    <ClInclude Include="..\..\..\..\include\PZLog.h" />
-    <ClInclude Include="..\..\..\..\include\PZLogger.h" />
-    <ClInclude Include="..\..\..\..\include\PZLogMgr.h" />
+    <ClInclude Include="..\..\..\..\include\common.hpp" />
+    <ClInclude Include="..\..\..\..\include\PZLog.hpp" />
+    <ClInclude Include="..\..\..\..\include\PZLogger.hpp" />
+    <ClInclude Include="..\..\..\..\include\PZLogMgr.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
