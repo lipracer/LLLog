@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-    int PZInitLog(int, const char *filepath, int level);
+    int PZInitLog(int mode, const char *filepath, int level);
     void PZLog(const char *module, int level, const char *msg);
 
 
