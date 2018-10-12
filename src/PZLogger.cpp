@@ -1,4 +1,4 @@
-#include "../include/PZLogger.hpp"
+#include "../include/PZLogger.h"
 #include <iomanip>
 #include <ctime>
 #include <iostream>
@@ -13,7 +13,19 @@
 
 using namespace std;
 
-PZCStr LogLevelInfo[] = { "UNKNOWN", "DEFAULT", "VERBOSE", "DEBUG", "INFO", "WARN", "ERROR", "FATAL", "SILENT" };
+PZCStr LogLevelInfo[] =
+{
+    "UNKNOWN",
+    "DEFAULT",
+    "VERBOSE",
+    "DEBUG",
+    "INFO",
+    "WARN",
+    "ERROR",
+    "FATAL",
+    "SILENT"
+    
+};
 
 PZBaseLogger::PZBaseLogger(PZ_LogPriority level):m_level(level) {}
 

@@ -5,8 +5,8 @@
 #include <atomic>
 #include <thread>
 #include <chrono>
-#include "common.hpp"
-#include "PZLogger.hpp"
+#include "common.h"
+#include "PZLogger.h"
 
 using namespace std;
 class PZLogMgr 

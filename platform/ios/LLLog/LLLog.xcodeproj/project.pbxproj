@@ -23,15 +23,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		332A19E62170F35200EC8731 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		332A19E72170F39B00EC8731 /* PZLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLog.h; sourceTree = "<group>"; };
+		332A19E82170F3AD00EC8731 /* PZLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogger.h; sourceTree = "<group>"; };
+		332A19E92170F3BA00EC8731 /* PZLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogMgr.h; sourceTree = "<group>"; };
 		A22DC40D214B9CD7003F84AE /* LLLog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LLLog; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22DC410214B9CD7003F84AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A22DC418214BAD59003F84AE /* PZLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLog.cpp; sourceTree = "<group>"; };
 		A22DC419214BAD59003F84AE /* PZLogger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLogger.cpp; sourceTree = "<group>"; };
 		A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLogMgr.cpp; sourceTree = "<group>"; };
-		A22DC41C214BAD92003F84AE /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
-		A22DC41D214BAD92003F84AE /* PZLog.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PZLog.hpp; sourceTree = "<group>"; };
-		A22DC41E214BAD92003F84AE /* PZLogger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PZLogger.hpp; sourceTree = "<group>"; };
-		A22DC41F214BAD92003F84AE /* PZLogMgr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PZLogMgr.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +85,10 @@
 		A22DC41B214BAD92003F84AE /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A22DC41C214BAD92003F84AE /* common.hpp */,
-				A22DC41D214BAD92003F84AE /* PZLog.hpp */,
-				A22DC41E214BAD92003F84AE /* PZLogger.hpp */,
-				A22DC41F214BAD92003F84AE /* PZLogMgr.hpp */,
+				332A19E62170F35200EC8731 /* common.h */,
+				332A19E72170F39B00EC8731 /* PZLog.h */,
+				332A19E82170F3AD00EC8731 /* PZLogger.h */,
+				332A19E92170F3BA00EC8731 /* PZLogMgr.h */,
 			);
 			name = include;
 			path = ../../../../include;

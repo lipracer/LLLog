@@ -1,4 +1,4 @@
-#include "../include/PZLogMgr.hpp"
+#include "../include/PZLogMgr.h"
 
 
 PZLogMgr::PZLogMgr() : m_isInit(false),m_log_mode(PZ_LogMode::Log_Default){}

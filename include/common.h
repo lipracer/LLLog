@@ -1,7 +1,7 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
  
-enum class PZ_LogPriority : int
+enum PZ_LogPriority
 {
     LOG_UNKNOWN = 0,
     LOG_DEFAULT,
@@ -13,7 +13,7 @@ enum class PZ_LogPriority : int
     LOG_FATAL,
     LOG_SILENT
 };
-enum class PZ_LogMode : unsigned int 
+enum PZ_LogMode 
 {
     Log_Default = 0,
     Log_Console = 0x01,

@@ -1,6 +1,6 @@
 #ifndef _PZLOGGER_H_
 #define _PZLOGGER_H_
-#include "common.hpp"
+#include "common.h"
 #include <fstream>
 #include <thread>
 
