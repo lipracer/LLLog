@@ -15,10 +15,5 @@ extern "C" {
 }
 #endif
 
-
-
-
-
-
 #endif // !_PZLOG_H_
 

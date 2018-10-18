@@ -15,7 +15,6 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     PZInitLog(Log_Console, "", LOG_DEBUG);
     
-    PZLog("", LOG_ERROR, "");
-    
+    PZLog("12", LOG_ERROR, "12");
     return 0;
 }

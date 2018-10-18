@@ -38,4 +38,12 @@ private:
     fstream m_fout;
 };
 
+class PZLoggerMix : public virtual PZLoggerConsole, public virtual PZLoggerFile
+{
+public:
+    PZLoggerMix(PZ_LogPriority level, PZCStr filename);
+    virtual ~PZLoggerMix();
+    virtual int Log(PZCStr module, PZ_LogPriority level, PZCStr msg);
+};
+
 #endif

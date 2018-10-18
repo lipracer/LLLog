@@ -19,7 +19,21 @@ int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filepath, PZ_LogPriority level)
             //m_filename = filepath;
             m_log_level = level;
             m_isInit = true;
-            m_logger = new PZLoggerFile(level, filepath);
+            switch(mode)
+            {
+                case Log_Console:
+                    m_logger = new PZLoggerConsole(level);
+                    break;
+                case Log_File:
+                    m_logger = new PZLoggerFile(level, filepath);
+                    break;
+                case Log_Mix:
+                    m_logger = (PZLoggerConsole*)(new PZLoggerMix(level, filepath));
+                default:
+                    m_logger = new PZLoggerConsole(level);
+                    break;
+            }
+            
         }
     }
     return 0;

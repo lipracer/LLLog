@@ -123,3 +123,20 @@ int PZLoggerFile::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
 
     return 0;
 }
+
+PZLoggerMix::PZLoggerMix(PZ_LogPriority level, PZCStr filename) : PZLoggerConsole(level), PZLoggerFile(level, filename)
+{
+    
+}
+
+PZLoggerMix::~PZLoggerMix()
+{
+    
+}
+
+int PZLoggerMix::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+{
+    PZLoggerConsole::Log(module, level, msg);
+    PZLoggerFile::Log(module, level, msg);
+    return 0;
+}

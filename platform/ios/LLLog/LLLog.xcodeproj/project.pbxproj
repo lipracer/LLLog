@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3358388B21786977003E3D91 /* PZLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC418214BAD59003F84AE /* PZLog.cpp */; };
+		3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC419214BAD59003F84AE /* PZLogger.cpp */; };
+		3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */; };
 		A22DC411214B9CD7003F84AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC410214B9CD7003F84AE /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */,
+				3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */,
+				3358388B21786977003E3D91 /* PZLog.cpp in Sources */,
 				A22DC411214B9CD7003F84AE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
