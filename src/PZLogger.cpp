@@ -27,20 +27,29 @@ PZCStr LogLevelInfo[] =
     
 };
 
-PZBaseLogger::PZBaseLogger(PZ_LogPriority level):m_level(level) {}
-
-PZBaseLogger::~PZBaseLogger() {}
-
-time_t PZBaseLogger::GetTimePoint() 
+time_t GetTimePoint()
 {
     chrono::system_clock::time_point now = chrono::system_clock::now();
     return chrono::system_clock::to_time_t(now);
 }
 
-thread::id PZBaseLogger::GetThreadId() 
+thread::id GetThreadId()
 {
     return this_thread::get_id();
 }
+
+string format_msg(PZCStr module, PZ_LogPriority level, PZCStr msg)
+{
+    stringstream ss;
+    ss << "[module:" << module << "]" << "[time:" << GetTimePoint() << "]" << "[thread:" << this_thread::get_id() << "]" << "[" << LogLevelInfo[(int)level] << "]" << msg << "\n";
+    return ss.str();
+}
+
+PZBaseLogger::PZBaseLogger(PZ_LogPriority level):m_level(level) {}
+
+PZBaseLogger::~PZBaseLogger() {}
+
+
 
 
 int PZBaseLogger::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
@@ -58,14 +67,12 @@ int PZLoggerConsole::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
 {
     if (level > m_level)
     {
-        stringstream ss;
+        
         chrono::system_clock::time_point now = chrono::system_clock::now();
         time_t now_c = chrono::system_clock::to_time_t(now);
-        //auto cstime = localtime(&now_c);        
+        //auto cstime = localtime(&now_c);
 
-        ss << "[time:" << GetTimePoint() << "]" << "[thread:" << this_thread::get_id() << "]" << "[" << LogLevelInfo[(int)level] << "]" << msg << "\n";
-
-        fprintf(stdout, "%s", ss.str().c_str());
+        fprintf(stdout, "%s", format_msg(module, level, msg).c_str());
 
 //#ifdef _WINDOWS
 //        fprintf(stdout, "%s", ss.str().c_str());
@@ -116,7 +123,7 @@ int PZLoggerFile::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
         {
             if (msg) 
             {
-                m_fout << "[time:" << GetTimePoint() << "]" << "[thread:" << this_thread::get_id() << "]" << "[" << LogLevelInfo[(int)level] << "]" << msg << "\n";;
+                m_fout << format_msg(module, level, msg) << endl;
             }
         }
     }
@@ -124,9 +131,11 @@ int PZLoggerFile::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
     return 0;
 }
 
-PZLoggerMix::PZLoggerMix(PZ_LogPriority level, PZCStr filename) : PZLoggerConsole(level), PZLoggerFile(level, filename)
+PZLoggerMix::PZLoggerMix(PZ_LogPriority level, PZCStr filename) : PZBaseLogger(level),
+                                                                    m_console_log(new PZLoggerConsole(level)),
+                                                                    m_file_log(new PZLoggerFile(level, filename))
 {
-    
+
 }
 
 PZLoggerMix::~PZLoggerMix()
@@ -136,7 +145,39 @@ PZLoggerMix::~PZLoggerMix()
 
 int PZLoggerMix::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
 {
-    PZLoggerConsole::Log(module, level, msg);
-    PZLoggerFile::Log(module, level, msg);
+    m_console_log->Log(module, level, msg);
+    m_file_log->Log(module, level, msg);
+    return 0;
+}
+
+PZLoggerNetWork::PZLoggerNetWork(PZ_LogPriority level, PZCStr filename) : PZBaseLogger(level)
+{
+    stringstream ss;
+    string addr = filename;
+    size_t pos = addr.find(":");
+    
+    ss << addr.substr(0, pos);
+    string ip;
+    ss >> ip;
+    ss.clear();
+    ss.str("");
+    
+    int port = 0;
+    ss << addr.substr(pos+1, addr.length() - ip.length());
+    ss >> port;
+    m_socket = new LSocket(ip, port);
+    
+    
+}
+
+PZLoggerNetWork::~PZLoggerNetWork()
+{
+    delete m_socket;
+}
+
+int PZLoggerNetWork::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+{
+    string msg_ = format_msg(module, level, msg);
+    m_socket->send(msg_.c_str(), msg_.length());
     return 0;
 }

@@ -18,7 +18,8 @@ enum PZ_LogMode
     Log_Default = 0,
     Log_Console = 0x01,
     Log_File = 0x02,
-    Log_Mix = 0x03
+    Log_Mix = 0x03,
+    Log_NetWork = 0x04,
 };
 
 using PZCStr = const char*;

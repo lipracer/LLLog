@@ -28,7 +28,11 @@ int PZLogMgr::InitLogMgr(PZ_LogMode mode, PZCStr filepath, PZ_LogPriority level)
                     m_logger = new PZLoggerFile(level, filepath);
                     break;
                 case Log_Mix:
-                    m_logger = (PZLoggerConsole*)(new PZLoggerMix(level, filepath));
+                    m_logger = new PZLoggerMix(level, filepath);
+                    break;
+                case Log_NetWork:
+                    m_logger = new PZLoggerNetWork(level, filepath);
+                    break;
                 default:
                     m_logger = new PZLoggerConsole(level);
                     break;

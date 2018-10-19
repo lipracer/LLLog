@@ -4,6 +4,8 @@
 #include <fstream>
 #include <thread>
 
+#include "LSocket.h"
+
 using namespace std;
 class PZBaseLogger 
 {
@@ -11,10 +13,6 @@ public:
     PZBaseLogger(PZ_LogPriority level);
     virtual ~PZBaseLogger();
     virtual int Log(PZCStr module, PZ_LogPriority level, PZCStr msg);
-
-    time_t GetTimePoint();
-
-    thread::id GetThreadId();
 
     PZ_LogPriority m_level;
 };
@@ -36,14 +34,31 @@ public:
 
 private:
     fstream m_fout;
+    mutex m_mtx;
 };
 
-class PZLoggerMix : public virtual PZLoggerConsole, public virtual PZLoggerFile
+class PZLoggerMix : public PZBaseLogger
 {
 public:
     PZLoggerMix(PZ_LogPriority level, PZCStr filename);
     virtual ~PZLoggerMix();
     virtual int Log(PZCStr module, PZ_LogPriority level, PZCStr msg);
+private:
+    //避免多重继承
+    PZBaseLogger* m_console_log;
+    PZBaseLogger* m_file_log;
+};
+
+class PZLoggerNetWork : public PZBaseLogger
+{
+public:
+    PZLoggerNetWork(PZ_LogPriority level, PZCStr filename);
+    virtual ~PZLoggerNetWork();
+    virtual int Log(PZCStr module, PZ_LogPriority level, PZCStr msg);
+private:
+public:
+private:
+    LSocket *m_socket;
 };
 
 #endif

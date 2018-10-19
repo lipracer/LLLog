@@ -10,6 +10,7 @@
 		3358388B21786977003E3D91 /* PZLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC418214BAD59003F84AE /* PZLog.cpp */; };
 		3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC419214BAD59003F84AE /* PZLogger.cpp */; };
 		3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */; };
+		33E5E01B2179C30D0066C160 /* LSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33E5E01A2179C30D0066C160 /* LSocket.cpp */; };
 		A22DC411214B9CD7003F84AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC410214B9CD7003F84AE /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		332A19E72170F39B00EC8731 /* PZLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLog.h; sourceTree = "<group>"; };
 		332A19E82170F3AD00EC8731 /* PZLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogger.h; sourceTree = "<group>"; };
 		332A19E92170F3BA00EC8731 /* PZLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogMgr.h; sourceTree = "<group>"; };
+		33E5E0192179C2F50066C160 /* LSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSocket.h; sourceTree = "<group>"; };
+		33E5E01A2179C30D0066C160 /* LSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LSocket.cpp; sourceTree = "<group>"; };
 		A22DC40D214B9CD7003F84AE /* LLLog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LLLog; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22DC410214B9CD7003F84AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A22DC418214BAD59003F84AE /* PZLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLog.cpp; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 				A22DC418214BAD59003F84AE /* PZLog.cpp */,
 				A22DC419214BAD59003F84AE /* PZLogger.cpp */,
 				A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */,
+				33E5E01A2179C30D0066C160 /* LSocket.cpp */,
 			);
 			name = src;
 			path = ../../../../src;
@@ -92,6 +96,7 @@
 				332A19E72170F39B00EC8731 /* PZLog.h */,
 				332A19E82170F3AD00EC8731 /* PZLogger.h */,
 				332A19E92170F3BA00EC8731 /* PZLogMgr.h */,
+				33E5E0192179C2F50066C160 /* LSocket.h */,
 			);
 			name = include;
 			path = ../../../../include;
@@ -156,6 +161,7 @@
 				3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */,
 				3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */,
 				3358388B21786977003E3D91 /* PZLog.cpp in Sources */,
+				33E5E01B2179C30D0066C160 /* LSocket.cpp in Sources */,
 				A22DC411214B9CD7003F84AE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +285,9 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
 			};
 			name = Debug;
 		};
@@ -288,6 +296,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -13,8 +13,12 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    PZInitLog(Log_Console, "", LOG_DEBUG);
+    PZInitLog(Log_NetWork, "127.0.0.1:9090", LOG_DEBUG);
     
-    PZLog("12", LOG_ERROR, "12");
+    while(true)
+    {
+        PZLog("12", LOG_ERROR, "12");
+    }
+    
     return 0;
 }
