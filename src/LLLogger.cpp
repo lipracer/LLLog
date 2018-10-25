@@ -1,4 +1,4 @@
-#include "../include/PZLogger.h"
+#include "../include/LLLogger.h"
 #include <iomanip>
 #include <ctime>
 #include <iostream>
@@ -13,7 +13,7 @@
 
 using namespace std;
 
-PZCStr LogLevelInfo[] =
+LLCStr LogLevelInfo[] =
 {
     "UNKNOWN",
     "DEFAULT",
@@ -38,32 +38,32 @@ thread::id GetThreadId()
     return this_thread::get_id();
 }
 
-string format_msg(PZCStr module, PZ_LogPriority level, PZCStr msg)
+string format_msg(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
     stringstream ss;
     ss << "[module:" << module << "]" << "[time:" << GetTimePoint() << "]" << "[thread:" << this_thread::get_id() << "]" << "[" << LogLevelInfo[(int)level] << "]" << msg << "\n";
     return ss.str();
 }
 
-PZBaseLogger::PZBaseLogger(PZ_LogPriority level):m_level(level) {}
+LLBaseLogger::LLBaseLogger(LL_LogPriority level):m_level(level) {}
 
-PZBaseLogger::~PZBaseLogger() {}
-
-
+LLBaseLogger::~LLBaseLogger() {}
 
 
-int PZBaseLogger::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+
+
+int LLBaseLogger::Log(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
-    //cout << "PZBaseLogger:" << msg << endl;
+    //cout << "LLBaseLogger:" << msg << endl;
     return 0;
 }
 
-PZLoggerConsole::PZLoggerConsole(PZ_LogPriority level) : PZBaseLogger(level)
+LLLoggerConsole::LLLoggerConsole(LL_LogPriority level) : LLBaseLogger(level)
 {
 }
 
-PZLoggerConsole::~PZLoggerConsole() {}
-int PZLoggerConsole::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+LLLoggerConsole::~LLLoggerConsole() {}
+int LLLoggerConsole::Log(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
     if (level > m_level)
     {
@@ -77,7 +77,7 @@ int PZLoggerConsole::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
 //#ifdef _WINDOWS
 //        fprintf(stdout, "%s", ss.str().c_str());
 //#elif ANDROID
-//        __android_log_print(level, "PZLOG-", "%s", ss.str().c_str());
+//        __android_log_print(level, "LLLOG-", "%s", ss.str().c_str());
 //#elif _IOS
 //        LOG_CONSOLE("%s", ss.str().c_str());
 //#endif
@@ -89,20 +89,20 @@ int PZLoggerConsole::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
 
 
 
-PZLoggerFile::PZLoggerFile(PZ_LogPriority level, PZCStr filepath) : PZBaseLogger(level)
+LLLoggerFile::LLLoggerFile(LL_LogPriority level, LLCStr filepath) : LLBaseLogger(level)
 {
     time_t timep;
     struct tm *p;
     time(&timep);
     p = gmtime(&timep);
 
-    //printf("%d\n", p->tm_sec); /*获取当前秒*/
-    //printf("%d\n", p->tm_min); /*获取当前分*/
-    //printf("%d\n", 8 + p->tm_hour);/*获取当前时,这里获取西方的时间,刚好相差八个小时*/
-    //printf("%d\n", p->tm_mday);/*获取当前月份日数,范围是1-31*/
-    //printf("%d\n", 1 + p->tm_mon);/*获取当前月份,范围是0-11,所以要加1*/
-    //printf("%d\n", 1900 + p->tm_year);/*获取当前年份,从1900开始，所以要加1900*/
-    //printf("%d\n", p->tm_yday); /*从今年1月1日算起至今的天数，范围为0-365*/
+    //printf("%d\n", p->tm_sec); /*取前*/
+    //printf("%d\n", p->tm_min); /*取前*/
+    //printf("%d\n", 8 + p->tm_hour);/*取前时,取时,蘸烁小时*/
+    //printf("%d\n", p->tm_mday);/*取前路,围1-31*/
+    //printf("%d\n", 1 + p->tm_mon);/*取前路,围0-11,要1*/
+    //printf("%d\n", 1900 + p->tm_year);/*取前,1900始要1900*/
+    //printf("%d\n", p->tm_yday); /*咏11围为0-365*/
     stringstream ss;
     ss << filepath << "/" << 1900 + p->tm_year << "-" << \
         1 + p->tm_mon << "-" << \
@@ -114,8 +114,8 @@ PZLoggerFile::PZLoggerFile(PZ_LogPriority level, PZCStr filepath) : PZBaseLogger
     m_fout.open(ss.str(), ios::out);
 }
 
-PZLoggerFile::~PZLoggerFile() { m_fout.close(); }
-int PZLoggerFile::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+LLLoggerFile::~LLLoggerFile() { m_fout.close(); }
+int LLLoggerFile::Log(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
     if (level > m_level)
     {
@@ -131,26 +131,26 @@ int PZLoggerFile::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
     return 0;
 }
 
-PZLoggerMix::PZLoggerMix(PZ_LogPriority level, PZCStr filename) : PZBaseLogger(level),
-                                                                    m_console_log(new PZLoggerConsole(level)),
-                                                                    m_file_log(new PZLoggerFile(level, filename))
+LLLoggerMix::LLLoggerMix(LL_LogPriority level, LLCStr filename) : LLBaseLogger(level),
+                                                                    m_console_log(new LLLoggerConsole(level)),
+                                                                    m_file_log(new LLLoggerFile(level, filename))
 {
 
 }
 
-PZLoggerMix::~PZLoggerMix()
+LLLoggerMix::~LLLoggerMix()
 {
     
 }
 
-int PZLoggerMix::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+int LLLoggerMix::Log(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
     m_console_log->Log(module, level, msg);
     m_file_log->Log(module, level, msg);
     return 0;
 }
 
-PZLoggerNetWork::PZLoggerNetWork(PZ_LogPriority level, PZCStr filename) : PZBaseLogger(level)
+LLLoggerNetWork::LLLoggerNetWork(LL_LogPriority level, LLCStr filename) : LLBaseLogger(level)
 {
     stringstream ss;
     string addr = filename;
@@ -170,12 +170,12 @@ PZLoggerNetWork::PZLoggerNetWork(PZ_LogPriority level, PZCStr filename) : PZBase
     
 }
 
-PZLoggerNetWork::~PZLoggerNetWork()
+LLLoggerNetWork::~LLLoggerNetWork()
 {
     delete m_socket;
 }
 
-int PZLoggerNetWork::Log(PZCStr module, PZ_LogPriority level, PZCStr msg)
+int LLLoggerNetWork::Log(LLCStr module, LL_LogPriority level, LLCStr msg)
 {
     string msg_ = format_msg(module, level, msg);
     m_socket->send(msg_.c_str(), msg_.length());

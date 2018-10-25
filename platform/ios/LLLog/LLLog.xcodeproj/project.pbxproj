@@ -7,41 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3358388B21786977003E3D91 /* PZLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC418214BAD59003F84AE /* PZLog.cpp */; };
-		3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC419214BAD59003F84AE /* PZLogger.cpp */; };
-		3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */; };
-		33E5E01B2179C30D0066C160 /* LSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33E5E01A2179C30D0066C160 /* LSocket.cpp */; };
-		A22DC411214B9CD7003F84AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22DC410214B9CD7003F84AE /* main.cpp */; };
+		333D349B217A0D0C0074D7EA /* LSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349A217A0D0C0074D7EA /* LSocket.cpp */; };
+		333D349D217A0D120074D7EA /* PZLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349C217A0D120074D7EA /* PZLog.cpp */; };
+		333D349F217A0D160074D7EA /* PZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349E217A0D160074D7EA /* PZLogger.cpp */; };
+		333D34A4217A0D700074D7EA /* PZLogMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D34A3217A0D700074D7EA /* PZLogMgr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A22DC40B214B9CD7003F84AE /* CopyFiles */ = {
+		333D348A217A0BE00074D7EA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		332A19E62170F35200EC8731 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		332A19E72170F39B00EC8731 /* PZLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLog.h; sourceTree = "<group>"; };
-		332A19E82170F3AD00EC8731 /* PZLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogger.h; sourceTree = "<group>"; };
-		332A19E92170F3BA00EC8731 /* PZLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLogMgr.h; sourceTree = "<group>"; };
-		33E5E0192179C2F50066C160 /* LSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSocket.h; sourceTree = "<group>"; };
-		33E5E01A2179C30D0066C160 /* LSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LSocket.cpp; sourceTree = "<group>"; };
-		A22DC40D214B9CD7003F84AE /* LLLog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LLLog; sourceTree = BUILT_PRODUCTS_DIR; };
-		A22DC410214B9CD7003F84AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A22DC418214BAD59003F84AE /* PZLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLog.cpp; sourceTree = "<group>"; };
-		A22DC419214BAD59003F84AE /* PZLogger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLogger.cpp; sourceTree = "<group>"; };
-		A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PZLogMgr.cpp; sourceTree = "<group>"; };
+		333D348C217A0BE00074D7EA /* libLLLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLLLog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		333D349A217A0D0C0074D7EA /* LSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LSocket.cpp; path = ../../../src/LSocket.cpp; sourceTree = "<group>"; };
+		333D349C217A0D120074D7EA /* PZLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLog.cpp; path = ../../../src/PZLog.cpp; sourceTree = "<group>"; };
+		333D349E217A0D160074D7EA /* PZLogger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLogger.cpp; path = ../../../src/PZLogger.cpp; sourceTree = "<group>"; };
+		333D34A3217A0D700074D7EA /* PZLogMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLogMgr.cpp; path = ../../../src/PZLogMgr.cpp; sourceTree = "<group>"; };
+		333D34A5217A0DCE0074D7EA /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../../../include/common.h; sourceTree = "<group>"; };
+		333D34A6217A0DCE0074D7EA /* PZLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLog.h; path = ../../../include/PZLog.h; sourceTree = "<group>"; };
+		333D34A7217A0DCE0074D7EA /* LSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSocket.h; path = ../../../include/LSocket.h; sourceTree = "<group>"; };
+		333D34A8217A0DCE0074D7EA /* PZLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLogger.h; path = ../../../include/PZLogger.h; sourceTree = "<group>"; };
+		333D34A9217A0DCE0074D7EA /* PZLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLogMgr.h; path = ../../../include/PZLogMgr.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A22DC40A214B9CD7003F84AE /* Frameworks */ = {
+		333D3489217A0BE00074D7EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,67 +49,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A22DC404214B9CD7003F84AE = {
+		333D3483217A0BE00074D7EA = {
 			isa = PBXGroup;
 			children = (
-				A22DC40F214B9CD7003F84AE /* LLLog */,
-				A22DC40E214B9CD7003F84AE /* Products */,
+				333D34A5217A0DCE0074D7EA /* common.h */,
+				333D34A6217A0DCE0074D7EA /* PZLog.h */,
+				333D34A7217A0DCE0074D7EA /* LSocket.h */,
+				333D34A8217A0DCE0074D7EA /* PZLogger.h */,
+				333D34A9217A0DCE0074D7EA /* PZLogMgr.h */,
+				333D34A3217A0D700074D7EA /* PZLogMgr.cpp */,
+				333D349E217A0D160074D7EA /* PZLogger.cpp */,
+				333D349C217A0D120074D7EA /* PZLog.cpp */,
+				333D349A217A0D0C0074D7EA /* LSocket.cpp */,
+				333D348D217A0BE00074D7EA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A22DC40E214B9CD7003F84AE /* Products */ = {
+		333D348D217A0BE00074D7EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A22DC40D214B9CD7003F84AE /* LLLog */,
+				333D348C217A0BE00074D7EA /* libLLLog.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A22DC40F214B9CD7003F84AE /* LLLog */ = {
-			isa = PBXGroup;
-			children = (
-				A22DC41B214BAD92003F84AE /* include */,
-				A22DC417214BAD59003F84AE /* src */,
-				A22DC410214B9CD7003F84AE /* main.cpp */,
-			);
-			path = LLLog;
-			sourceTree = "<group>";
-		};
-		A22DC417214BAD59003F84AE /* src */ = {
-			isa = PBXGroup;
-			children = (
-				A22DC418214BAD59003F84AE /* PZLog.cpp */,
-				A22DC419214BAD59003F84AE /* PZLogger.cpp */,
-				A22DC41A214BAD59003F84AE /* PZLogMgr.cpp */,
-				33E5E01A2179C30D0066C160 /* LSocket.cpp */,
-			);
-			name = src;
-			path = ../../../../src;
-			sourceTree = "<group>";
-		};
-		A22DC41B214BAD92003F84AE /* include */ = {
-			isa = PBXGroup;
-			children = (
-				332A19E62170F35200EC8731 /* common.h */,
-				332A19E72170F39B00EC8731 /* PZLog.h */,
-				332A19E82170F3AD00EC8731 /* PZLogger.h */,
-				332A19E92170F3BA00EC8731 /* PZLogMgr.h */,
-				33E5E0192179C2F50066C160 /* LSocket.h */,
-			);
-			name = include;
-			path = ../../../../include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A22DC40C214B9CD7003F84AE /* LLLog */ = {
+		333D348B217A0BE00074D7EA /* LLLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A22DC414214B9CD7003F84AE /* Build configuration list for PBXNativeTarget "LLLog" */;
+			buildConfigurationList = 333D3495217A0BE00074D7EA /* Build configuration list for PBXNativeTarget "LLLog" */;
 			buildPhases = (
-				A22DC409214B9CD7003F84AE /* Sources */,
-				A22DC40A214B9CD7003F84AE /* Frameworks */,
-				A22DC40B214B9CD7003F84AE /* CopyFiles */,
+				333D3488217A0BE00074D7EA /* Sources */,
+				333D3489217A0BE00074D7EA /* Frameworks */,
+				333D348A217A0BE00074D7EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -119,57 +90,56 @@
 			);
 			name = LLLog;
 			productName = LLLog;
-			productReference = A22DC40D214B9CD7003F84AE /* LLLog */;
-			productType = "com.apple.product-type.tool";
+			productReference = 333D348C217A0BE00074D7EA /* libLLLog.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A22DC405214B9CD7003F84AE /* Project object */ = {
+		333D3484217A0BE00074D7EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "___multiMedia___";
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "陈龙";
 				TargetAttributes = {
-					A22DC40C214B9CD7003F84AE = {
-						CreatedOnToolsVersion = 9.4.1;
+					333D348B217A0BE00074D7EA = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = A22DC408214B9CD7003F84AE /* Build configuration list for PBXProject "LLLog" */;
+			buildConfigurationList = 333D3487217A0BE00074D7EA /* Build configuration list for PBXProject "LLLog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A22DC404214B9CD7003F84AE;
-			productRefGroup = A22DC40E214B9CD7003F84AE /* Products */;
+			mainGroup = 333D3483217A0BE00074D7EA;
+			productRefGroup = 333D348D217A0BE00074D7EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A22DC40C214B9CD7003F84AE /* LLLog */,
+				333D348B217A0BE00074D7EA /* LLLog */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A22DC409214B9CD7003F84AE /* Sources */ = {
+		333D3488217A0BE00074D7EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3358388D21786982003E3D91 /* PZLogMgr.cpp in Sources */,
-				3358388C2178697E003E3D91 /* PZLogger.cpp in Sources */,
-				3358388B21786977003E3D91 /* PZLog.cpp in Sources */,
-				33E5E01B2179C30D0066C160 /* LSocket.cpp in Sources */,
-				A22DC411214B9CD7003F84AE /* main.cpp in Sources */,
+				333D349F217A0D160074D7EA /* PZLogger.cpp in Sources */,
+				333D349B217A0D0C0074D7EA /* LSocket.cpp in Sources */,
+				333D349D217A0D120074D7EA /* PZLog.cpp in Sources */,
+				333D34A4217A0D700074D7EA /* PZLogMgr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A22DC412214B9CD7003F84AE /* Debug */ = {
+		333D3493217A0BE00074D7EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -201,7 +171,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -220,15 +190,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = ./../../../include;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		A22DC413214B9CD7003F84AE /* Release */ = {
+		333D3494217A0BE00074D7EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +230,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -273,56 +243,58 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = ./../../../include;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A22DC415214B9CD7003F84AE /* Debug */ = {
+		333D3496217A0BE00074D7EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
-				"HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A22DC416214B9CD7003F84AE /* Release */ = {
+		333D3497217A0BE00074D7EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
-				"HEADER_SEARCH_PATHS[arch=*]" = ./../../../include;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A22DC408214B9CD7003F84AE /* Build configuration list for PBXProject "LLLog" */ = {
+		333D3487217A0BE00074D7EA /* Build configuration list for PBXProject "LLLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A22DC412214B9CD7003F84AE /* Debug */,
-				A22DC413214B9CD7003F84AE /* Release */,
+				333D3493217A0BE00074D7EA /* Debug */,
+				333D3494217A0BE00074D7EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A22DC414214B9CD7003F84AE /* Build configuration list for PBXNativeTarget "LLLog" */ = {
+		333D3495217A0BE00074D7EA /* Build configuration list for PBXNativeTarget "LLLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A22DC415214B9CD7003F84AE /* Debug */,
-				A22DC416214B9CD7003F84AE /* Release */,
+				333D3496217A0BE00074D7EA /* Debug */,
+				333D3497217A0BE00074D7EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A22DC405214B9CD7003F84AE /* Project object */;
+	rootObject = 333D3484217A0BE00074D7EA /* Project object */;
 }

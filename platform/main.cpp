@@ -9,15 +9,15 @@
 #include <iostream>
 #include <string>
 #include "common.h"
-#include "PZLog.h"
+#include "LLLog.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    PZInitLog(Log_NetWork, "127.0.0.1:9090", LOG_DEBUG);
+    LLInitLog(Log_NetWork, "127.0.0.1:9090", LOG_DEBUG);
     
     while(true)
     {
-        PZLog("12", LOG_ERROR, "12");
+        LLLog("12", LOG_ERROR, "12");
     }
     
     return 0;
