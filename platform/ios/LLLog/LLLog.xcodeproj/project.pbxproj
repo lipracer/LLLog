@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		333D349B217A0D0C0074D7EA /* LSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349A217A0D0C0074D7EA /* LSocket.cpp */; };
-		333D349D217A0D120074D7EA /* PZLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349C217A0D120074D7EA /* PZLog.cpp */; };
-		333D349F217A0D160074D7EA /* PZLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D349E217A0D160074D7EA /* PZLogger.cpp */; };
-		333D34A4217A0D700074D7EA /* PZLogMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 333D34A3217A0D700074D7EA /* PZLogMgr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,14 +25,8 @@
 /* Begin PBXFileReference section */
 		333D348C217A0BE00074D7EA /* libLLLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLLLog.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D349A217A0D0C0074D7EA /* LSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LSocket.cpp; path = ../../../src/LSocket.cpp; sourceTree = "<group>"; };
-		333D349C217A0D120074D7EA /* PZLog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLog.cpp; path = ../../../src/PZLog.cpp; sourceTree = "<group>"; };
-		333D349E217A0D160074D7EA /* PZLogger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLogger.cpp; path = ../../../src/PZLogger.cpp; sourceTree = "<group>"; };
-		333D34A3217A0D700074D7EA /* PZLogMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PZLogMgr.cpp; path = ../../../src/PZLogMgr.cpp; sourceTree = "<group>"; };
 		333D34A5217A0DCE0074D7EA /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../../../include/common.h; sourceTree = "<group>"; };
-		333D34A6217A0DCE0074D7EA /* PZLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLog.h; path = ../../../include/PZLog.h; sourceTree = "<group>"; };
 		333D34A7217A0DCE0074D7EA /* LSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSocket.h; path = ../../../include/LSocket.h; sourceTree = "<group>"; };
-		333D34A8217A0DCE0074D7EA /* PZLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLogger.h; path = ../../../include/PZLogger.h; sourceTree = "<group>"; };
-		333D34A9217A0DCE0074D7EA /* PZLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PZLogMgr.h; path = ../../../include/PZLogMgr.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				333D34A5217A0DCE0074D7EA /* common.h */,
-				333D34A6217A0DCE0074D7EA /* PZLog.h */,
 				333D34A7217A0DCE0074D7EA /* LSocket.h */,
-				333D34A8217A0DCE0074D7EA /* PZLogger.h */,
-				333D34A9217A0DCE0074D7EA /* PZLogMgr.h */,
-				333D34A3217A0D700074D7EA /* PZLogMgr.cpp */,
-				333D349E217A0D160074D7EA /* PZLogger.cpp */,
-				333D349C217A0D120074D7EA /* PZLog.cpp */,
 				333D349A217A0D0C0074D7EA /* LSocket.cpp */,
 				333D348D217A0BE00074D7EA /* Products */,
 			);
@@ -129,10 +114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333D349F217A0D160074D7EA /* PZLogger.cpp in Sources */,
 				333D349B217A0D0C0074D7EA /* LSocket.cpp in Sources */,
-				333D349D217A0D120074D7EA /* PZLog.cpp in Sources */,
-				333D34A4217A0D700074D7EA /* PZLogMgr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
